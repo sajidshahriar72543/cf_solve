@@ -1,0 +1,29 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Inception++</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Inception++</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>2 seconds</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P><SPAN class="tex-font-style-it">"Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange."</SPAN></P><P>Mal and Cobb has made $$$n$$$ buildings of <SPAN class="tex-font-style-bf">distinct</SPAN> heights numbered from $$$1$$$ to $$$n$$$. They also make two lists of highest and lowest buildings (based on height) from first to each building. In the other words, they want to find $$$n$$$ highest and $$$n$$$ lowest heights from $$$1$$$ to $$$i$$$-th building ($$$1 \le i \le n$$$).</P><P>For example, Mal and Cobb has made four buildings and their heights are $$${11, 5, 25, 6}$$$ meters. So the list of highest buildings is, $$$H$$$ = $$${11, 11, 25, 25}$$$ and the list of lowest buildings is, $$$L$$$ = $$${11, 5, 5, 5}$$$.</P><P>After that, Mal wants to check is she in dream or in reality. But accidentally she had lost her totem (a spinning top which determine whether she is in reality or dream). Now she wants help from you (may be she thought you as Nolan. Not bad, na?). </P><P>You have that two lists, $$$H$$$ and $$$L$$$. If it is possible to obtain original heights from two lists, Mal is in Reality. Otherwise she has made buildings in dream (maybe people can't do correct calculation in dream). If she is in reality give her the list of original heights. Otherwise report her she is in dream.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>At first line of input is an integer $$$t$$$ ($$$1 \le t \le 100$$$) denotes the number of test cases. And each test case has described in $$$3$$$ lines.</P><P>First line contains an integer $$$n$$$ ($$$1 \le n \le 3000$$$) - number of buildings.</P><P>Second line contains $$$n$$$ integers $$$H_1, H_2, \dots, H_n$$$ ($$$0 \le H_i \le 10^9$$$) - list of highest buildings.</P><P>Third line contains $$$n$$$ integers $$$L_1, L_2, \dots, L_n$$$ ($$$0 \le L_i \le 10^9$$$) - list of lowest buildings.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>Print one of the following answers per test case. </P><UL type="disc"> <LI> If Mal in reality <UL type="circle"> <LI> print number of buildings, $$$n$$$ at first line </LI><LI> in second line, print $$$n$$$ integers - height of each building </LI></UL> </LI><LI> If Mal in dream, print $$$-1$$$ in a single line </LI></UL><P></P><P>If there multiple solutions, you can print any.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Example</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content">
+2
+4
+11 11 25 25
+11 5 5 5
+3
+3 3 3
+3 2 2
+</PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+4
+11 5 25 6
+-1
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>For the 2nd tese case, we assume - </P><UL type="disc"> <LI> height of $$$1st$$$ building is 3, so, $$$H$$$ = $$${3}$$$, $$$L$$$ = $$${3}$$$. </LI><LI> height of $$$2nd$$$ building is 2, so, $$$H$$$ = $$${3, 3}$$$, $$$L$$$ = $$${3, 2}$$$ </LI><LI> there are no possible height of $$$3rd$$$ building. Height of $$$3rd$$$ building is greater than $$$2$$$ (not equal $$$2$$$ because height of $$$2nd$$$ building is $$$2$$$) and less than $$$3$$$ (not equal $$$3$$$ because height of $$$1st$$$ building is $$$3$$$). </LI></UL> So, Mal and Cobb has made buildings in dream.</DIV></DIV><P></P><P>  
+
+</P></BODY></HTML>

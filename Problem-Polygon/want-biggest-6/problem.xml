@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="6" short-name="want-biggest" url="https://polygon.codeforces.com/p1x9gf4/rifatrraazz/want-biggest">
+    <names>
+        <name language="english" value="Inception++"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>30</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test description="Sample Test Case" method="manual" sample="true"/>
+                <test method="manual"/>
+                <test description="Random - 1 with a corner case (2)" method="manual"/>
+                <test description="Random - 2" method="manual"/>
+                <test description="File &quot;04&quot;" method="manual"/>
+                <test description="File &quot;05&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;06&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;07&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;08&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;09&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;10&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;17&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;20&quot;" method="manual"/>
+                <test method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;11&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;12&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;13&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;14&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;15&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;16&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;18&quot;" method="manual"/>
+                <test description="Archive &quot;test.zip&quot;; file &quot;19&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;Random&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;TLE&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;TLE2&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;brute&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;randm&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;randm2&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;small_random&quot;" method="manual"/>
+                <test description="Archive &quot;tst.zip&quot;; file &quot;small_tight&quot;" method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/check.cpp" type="cpp.g++17"/>
+                <binary path="files/check.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/valid_check.cpp" type="cpp.g++17"/>
+                <binary path="files/valid_check.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>1</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/valid_check.cpp" type="cpp.g++17"/>
+                <binary path="files/valid_check.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>5</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="invalid"/>
+                        <test verdict="valid"/>
+                        <test verdict="invalid"/>
+                    </tests>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/judge_solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/judge_solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution.py" type="python.pypy3"/>
+                <binary path="solutions/solution.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/tle.cpp" type="cpp.g++17"/>
+                <binary path="solutions/tle.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+    <tags>
+        <tag value="constructive algorithms"/>
+        <tag value="data structures"/>
+        <tag value="two pointers"/>
+    </tags>
+</problem>
